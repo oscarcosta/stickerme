@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Replace the Facebook AppId to fb.js by the value in the variable $FACEBOOK_APPID
+if [ ! -z $FACEBOOK_APPID ]; then
+  sed -i "/appId:/s/\".*\"/\"$FACEBOOK_APPID\"/" $OPENSHIFT_REPO_DIR/public/js/app/fb.js 
+fi
+
+# Execute the r.js optimization
+(cd $OPENSHIFT_REPO_DIR/public/js/ && node ../../r.js -o ../../app.build.js)
+
+# Change public dir to otimized version
+if [ -d $OPENSHIFT_REPO_DIR/public-build ]; then
+  mv $OPENSHIFT_REPO_DIR/public $OPENSHIFT_REPO_DIR/public-src
+  mv $OPENSHIFT_REPO_DIR/public-build $OPENSHIFT_REPO_DIR/public
+fi

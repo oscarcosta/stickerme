@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sticker ME</title>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index, follow"/>
+        <meta name="keywords" content="sticker, cromo, figurinha, album, world cup, copa do mundo, facebook, profile picture"/>
+        <meta name="description" content="Make a sticker with the profile picture of your social networks."/>
+
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+        
+        <script data-main="js/app" src="js/libs/require/require.min.js"></script>
+    </head>
+    <body>
+        <div class="app-wrapper ui-widget-content ui-corner-all">
+            <div class="header">
+                <div class="header-links">
+                    <div id="label_about">About</div>
+                    <div id="label_contact">Contact</div>
+                </div>
+                <div class="social-plugins">
+                    <div class="fb-like" data-href="http://www.stickerme.net/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+                    <div class="tw-tweet">
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-text="Create stickers with your photos to your social networks using StickerME." data-count="none" data-hashtags="StickerME">Tweet</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="main-wrapper" style="display: block;">
+                <div class="selector-wrapper ui-corner-all">
+                    <div id="stickers_selector"></div>
+                    <a href="#" class="ui-nav ui-nav-prev"></a>
+                    <a href="#" class="ui-nav ui-nav-next"></a>
+                </div>
+                <div class="picture-wrapper">
+                    <div class="picture-merger">
+                        <img id="file" name="file" src="" alt="My Picture"/>
+                    </div>
+                    <form id="main_form">
+                        <input type="hidden" id="sticker" name="sticker" value="" />
+                        <input type="hidden" id="picture" name="picture" value="" />
+                        <input type="hidden" id="userid" name="userid" value="" />
+                        <input type="hidden" id="username" name="username" value="" />
+                        <input type="hidden" id="x1" name="x1" value="" />
+                        <input type="hidden" id="x2" name="x2" value="" />
+                        <input type="hidden" id="y1" name="y1" value="" />
+                        <input type="hidden" id="y2" name="y2" value="" />
+                        <input type="hidden" id="w" name="w" value="" />
+                        <input type="hidden" id="h" name="h" value="" />
+                    </form>
+                    <button id="btn_profile">Facebook Picture</button>
+                    <button id="btn_upload">Upload Picture</button>
+                    <button id="btn_take">Take Picture</button>
+                    <button id="btn_generate" class="ui-priority-primary">Generate Sticker</button>
+                </div>
+                <div class="clear"></div>
+            </div>
+            
+            <div class="response-wrapper" style="display: none;">
+                <div class="response-sticker">
+                    <img id="response_sticker" src="" alt="My Picture"/>
+                </div>
+                <button id="btn_reload">New Sticker</button>
+                <button id="btn_download">Download Sticker</button>
+                <button id="btn_share" class="ui-priority-primary">Share on Facebook</button>
+            </div>
+
+            <div class="message"></div>
+
+            <div class="ads-wrapper">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- StickerME -->
+                <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-6893673335812369" data-ad-slot="5268196927"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+
+        <div id="dlg_facebook" title="Select a Picture" style="display: none;">
+            <p id="text_picture_facebook">Select a picture from your profile</p>
+            <div class="pictures-wrapper ui-corner-all">
+                <div id="pictures_selector"></div>
+                <a href="#" class="ui-nav ui-nav-prev"></a>
+                <a href="#" class="ui-nav ui-nav-next"></a>
+            </div>
+        </div>
+
+        <div id="dlg_share" title="Share on Facebook" style="display: none;">
+            <p id="text_share">Write a message to share with you sticker:</p>
+            <textarea id="share_message" rows="5" cols="50" ></textarea>
+            <button id="btn_confirm_share" class="ui-priority-primary">Confirm</button>
+        </div>
+
+        <div id="dlg_upload" title="Upload Picture" style="display: none;">
+            <p id="text_picture_upload">Upload a new picture</p>
+            <input id="picture_upload" type="file" name="file">
+            <div id="upload_progress">
+                <div class="bar" style="width: 0%;"></div>
+            </div>
+        </div>
+
+        <div id="dlg_about" title="About Sticker Me" style="display: none;"></div>
+
+        <div id="dlg_contact" title="Contact" style="display: none;"></div>
+
+        <div id="fb-root"></div>
+
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-51978343-1', 'stickerme.net');
+          ga('send', 'pageview');
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# cleans the upload dir, then copy the memes to upload dir
+rm -rfv ${OPENSHIFT_TMP_DIR}/uploads/*
+cp ${OPENSHIFT_REPO_DIR}/public/images/memes/* ${OPENSHIFT_TMP_DIR}/uploads/

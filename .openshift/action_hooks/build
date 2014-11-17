@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# insert the "undefined" user to count not logged in user actions
+#mongo $OPENSHIFT_APP_NAME $OPENSHIFT_REPO_DIR/initdb.js

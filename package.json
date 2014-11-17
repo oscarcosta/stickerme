@@ -1,0 +1,40 @@
+{
+  "name": "StickerMe",
+  "version": "1.0.0",
+  "description": "Sticker Me is an application to generate stickers with user pictures to social network",
+  "keywords": [
+    "OpenShift",
+    "Node.js",
+    "application",
+    "openshift",
+    "stickerme",
+    "sticker"
+  ],
+  "author": {
+    "name": "Oscar Costa",
+    "email": "oscarcosta@gmail.com",
+    "url": "http://www.openarch.com.br"
+  },
+  "homepage": "http://www.stickerme.net",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oscarcosta/stickerme"
+  },
+  "engines": {
+    "node": "= 0.10.0",
+    "npm": "= 1.3.6"
+  },
+  "dependencies": {
+    "express": "4.4.0",
+    "gm": "1.16.0",
+    "body-parser": "1.3.0",
+    "multer": "0.1.0",
+    "mime": "1.2.11",
+    "fb": "0.7.0",
+    "mongojs": "0.13.0"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+  "private": true,
+  "main": "server.js"
+}

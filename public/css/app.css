@@ -1,0 +1,215 @@
+@import url('../js/libs/jqueryui/css/jquery-ui-1.10.4.custom.min.css'); 
+@import url('../js/libs/jquery-jcrop/css/jquery.Jcrop.css');
+@import url('../js/libs/jquery-rcarousel/rcarousel.css');
+@import url('../js/libs/jquery-fileupload/jquery.fileupload.css');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(51, 51, 51);
+}
+
+.app-wrapper {
+    width: 756px;
+    margin: 0 auto;
+    padding: 2px;
+}
+
+.header {
+    background: url(../images/stickerme_banner.png) #285c00 center center no-repeat;
+    height: 100px;
+    text-align: center;
+}
+
+.header span {
+    display: none;
+}
+
+.main-wrapper, .response-wrapper {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0px;
+}
+
+.message {
+    width: 745px;
+    margin: 5px;
+}
+
+.ads-wrapper {
+    width: 100%;
+    height: 90px;
+    text-align: center;
+}
+
+.clear { 
+    clear: both;
+}
+
+/* main page */
+.selector-wrapper {
+    width: 150px;
+    height: 530px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+.selector-wrapper .ui-nav {
+    width: 100%;
+    height: 40px;
+    display: block;
+    position: absolute;
+    z-index: 100;
+}
+
+.selector-wrapper .ui-nav-prev {
+    background: url(../images/arrow_up.gif) #fff center center no-repeat;
+    top: 0;
+}
+
+.selector-wrapper .ui-nav-next {
+    background: url(../images/arrow_down.gif) #fff center center no-repeat;
+    bottom: 0;
+}
+
+#stickers_selector {
+    top: 40px;
+}
+
+#stickers_selector img {
+    border: 0;
+    cursor: pointer;
+}
+
+.picture-wrapper {
+    width: 605px;
+    height: 540px;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.picture-wrapper button {
+    height: 30px;
+    margin: -1px;
+}
+
+#btn_generate {
+    
+}
+
+.picture-merger {
+    width: 500px;
+    height: 500px;
+    margin-left: 50px;
+    margin-bottom: 5px;
+}
+
+/* result page */
+.response-sticker {
+    height: 500px;
+    width: 100%;
+    padding: 5px 0px;
+    text-align: center;
+}
+
+.response-sticker img {
+    height: 500px;
+    width: auto;
+}
+
+.response-wrapper button {
+    width: 200px;
+    height: 30px;
+}
+
+/* upload dialog */
+.bar {
+    height: 18px;
+    background: green;
+}
+
+/* facebook dialog */
+.pictures-wrapper {
+    width: 680px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    left: -5px;
+}
+
+.pictures-wrapper .ui-nav {
+    width: 40px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: 100;
+    background-color: #fff;
+}
+
+.pictures-wrapper .ui-nav-prev {
+    background: url(../images/arrow_left.gif) #fff center center no-repeat;
+    left: 0;
+    top: 0;
+}
+
+.pictures-wrapper .ui-nav-next {
+    background: url(../images/arrow_right.gif) #fff center center no-repeat;
+    right: 0;
+    top: 0;
+}
+
+#pictures_selector {
+    left: 40px;
+}
+
+#pictures_selector img {
+    border: 0;
+    cursor: pointer;
+}
+
+/* share dialog */
+#dlg_share button {
+    float: right;
+    left: 4px;
+}
+
+#share_message {
+    margin-left: -5px;
+    margin-bottom: 10px;
+}
+
+/* social plugins */
+.social-plugins {
+    position: relative;
+    float: left;
+    top: 75px;
+    left: 15px;
+}
+.social-plugins div {
+    float: left;
+    margin-right: 4px;
+}
+
+/* header links */
+.header-links {
+    position: relative;
+    float: right;
+    top: 75px;
+    right: 15px;
+}
+.header-links div {
+    float: left;
+    margin-left: 8px;
+    cursor: pointer;
+    font-style: italic;
+    font-size: 15px;
+    font-family: Sans;
+    font-weight: bold;
+}
+
+/* overridden styles */
+.ui-front {
+    z-index: 1000 !important;
+}

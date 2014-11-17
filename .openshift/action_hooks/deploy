@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Create a external upload folder if it not exists
+if [ ! -d $OPENSHIFT_TMP_DIR/uploads ]; then
+  mkdir $OPENSHIFT_TMP_DIR/uploads
+fi
+
+# Copy the memes images to the external uploads folder
+if [ -d $OPENSHIFT_TMP_DIR/uploads ]; then
+  cp -u $OPENSHIFT_REPO_DIR/public/images/memes/* $OPENSHIFT_TMP_DIR/uploads/
+fi
+
+# Create a external stickers folder if it not exists
+if [ ! -d $OPENSHIFT_DATA_DIR/stickers ]; then
+  mkdir $OPENSHIFT_DATA_DIR/stickers
+fi
+
+# Create a external templates folder if it not exists
+if [ ! -d $OPENSHIFT_DATA_DIR/templates ]; then
+  mkdir $OPENSHIFT_DATA_DIR/templates
+fi
+
+# Replace the internal sticker folder by a link to external templates folder, 
+# then update the content of the external templates folder
+if [ -d $OPENSHIFT_DATA_DIR/templates ]; then
+  mv $OPENSHIFT_REPO_DIR/public/images/stickers $OPENSHIFT_REPO_DIR/public/images/templates
+  ln -s $OPENSHIFT_DATA_DIR/templates $OPENSHIFT_REPO_DIR/public/images/stickers
+  cp -u $OPENSHIFT_REPO_DIR/public/images/templates/* $OPENSHIFT_DATA_DIR/templates/
+fi
