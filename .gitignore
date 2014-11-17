@@ -26,3 +26,12 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+
+# gedit tmp file
+*~
+
+# App tmp folders
+uploads/*
+stickers/*
+
+
